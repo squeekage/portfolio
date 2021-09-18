@@ -241,6 +241,7 @@ h2 {
         border-radius: 20px;
         overflow: hidden;
         max-width: 500px;
+        min-width: 300px;
     }
 
     .project:first-of-type {
