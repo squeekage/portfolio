@@ -69,16 +69,15 @@ article{
 }
 
 article div[id] {
-    margin-left: 150px;
+    margin-left: 147px;
     padding: 10px 15px;
     min-height: 300px;
+    border-left: solid 3px transparent;
 }
 
 article:hover div[id]{
-    border-left: solid 3px var(--purple);
+    border-left-color: var(--purple);
     position: relative;
-    left: -3px;
-    padding-left: 18px;
 }
 
 article:hover h2{
