@@ -13,7 +13,19 @@ header {
     position: relative;
     z-index: 2;
     background-image: url("../images/microscope.jpg");
+    background-color: var(--purple);
     /*background-size: cover;*/
+}
+
+header::after { /*seperate element for box shadow from the header*/
+    content: "";
+    width: calc(100% - 150px); /*make width the value of the window minus the aside*/
+    height: 3px; /*shadow won't appear without a height*/
+    box-shadow: 0px 2px 3px var(--shadow);
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    left: 150px; /*start shadow to the right of the aside*/
 }
 
 h1 {
@@ -25,6 +37,7 @@ h1 {
 
 nav {
     background-color: var(--purple);
+    background-image: linear-gradient(var(--purple), var(--purple), #380f7f);
     height: 50px;
 }
 
@@ -51,7 +64,7 @@ footer{
 }
 
 article{
-
+    position: relative; /*required for the hover effects to show up when mousing over the aside*/
 }
 
 #projects {
@@ -72,9 +85,10 @@ article div[id] {
     margin-left: 147px;
     padding: 10px 15px;
     min-height: 300px;
-    border-left: solid 3px transparent;
+    border-left: solid 3px transparent; /*initial border set to transparent, will turn purple on hover*/
 }
 
+/*when hovering over an article add purple border on left and change heading text to purple*/
 article:hover div[id]{
     border-left-color: var(--purple);
     position: relative;
@@ -92,31 +106,28 @@ article:hover h2{
     height: 100%;
     background-color: #d1d2d3;
     box-shadow: 2px 0px 3px var(--shadow);
-    
 }
 
 h2 {
     transform: translateX(150px) rotate(90deg);
-    transform-origin: 0% 0%;
+    transform-origin: 0% 0%; /*rotate from top left. Default seems to be from center which gives variable results with text length*/
     font-size: 35px;
     position: absolute;
-    /*color: var(--purple);*/
     color: transparent;
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    /*color: var(--purple);*/
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.6); /*use rgba for opacity. 100% opacity does not look right*/
+    background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    background-clip: text;
-    background-color: #666666;
+    background-color: #333333;
     font-weight: bolder;
     line-height: 150px;
-    width: 300px;
 }
 
 .project {
     flex: 1 0;
     height: 150px;
     border: solid 3px black;
-    /*   background-color: #b200ff;*/
     position: relative;
     border-radius: 20px;
     overflow: hidden;
@@ -164,6 +175,11 @@ h2 {
 }
 
 @media screen and (max-width: 992px) {
+    header::after { /*change the header shadow to be full width*/
+        content: "";
+        width: 100%; 
+        left: 0px;
+    }
 
     .titleContainer{
         display: none;
@@ -206,6 +222,8 @@ h2 {
         flex: 1 0 100%;
         height: 225px;
     }
+
+    /*there are no hover effects on mobile size*/
     article:hover div[id] {
         border-left: none;
         position: static;
