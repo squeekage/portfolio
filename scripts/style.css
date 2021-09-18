@@ -63,33 +63,42 @@ footer{
     line-height: 30px;
 }
 
-article{
+article {
     position: relative; /*required for the hover effects to show up when mousing over the aside*/
+    margin-bottom: 15px;
 }
 
-#projects {
+a{
+    color: var(--purple);
+    text-decoration: none;
+}
+
+#projects > div:first-of-type {
     display: flex;
     flex-wrap: wrap;
     min-width: 300px;
-    max-width: 1000px;
     flex-flow: row wrap;
     gap: 10px 10px;
     justify-content: center;
 }
 
-#about{
+#contact > div:first-of-type {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 30px;
+    justify-content: space-around;
+}
+
+article div[data-content] {
+    margin-left: 147px;
+    padding: 10px 15px;
+    min-height: 220px;
+    border-left: solid 3px transparent; /*initial border set to transparent, will turn purple on hover*/
     max-width: 1000px;
 }
 
-article div[id] {
-    margin-left: 147px;
-    padding: 10px 15px;
-    min-height: 300px;
-    border-left: solid 3px transparent; /*initial border set to transparent, will turn purple on hover*/
-}
-
 /*when hovering over an article add purple border on left and change heading text to purple*/
-article:hover div[id]{
+article:hover div[data-content] {
     border-left-color: var(--purple);
     position: relative;
 }
@@ -184,6 +193,11 @@ h2 {
     margin: 15px;
 }
 
+.contactType{
+    font-size: 50px;
+    vertical-align: middle;
+}
+
 @media screen and (max-width: 992px) {
     header::after { /*change the header shadow to be full width*/
         content: "";
@@ -211,10 +225,11 @@ h2 {
         width: 25vw;
     }
 
-    article div[id] {
+    article div[data-content] {
         margin-left: 5px;
         padding: 10px 15px;
-        min-height:auto;
+        min-height: auto;
+        border-width: 0px;
     }
 
     .project {
@@ -234,8 +249,7 @@ h2 {
     }
 
     /*there are no hover effects on mobile size*/
-    article:hover div[id] {
-        border-left: none;
+    article:hover div[data-content] {
         position: static;
         padding-left: 15px;
     }
@@ -265,7 +279,7 @@ h2 {
 
     nav li {
         line-height: 7vh;
-        padding: 0 1vw;
+        padding: 0 3vw;
     }
     nav ul {
         float: none;
