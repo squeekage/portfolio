@@ -45,6 +45,11 @@ nav a{
     text-decoration: none;
 }
 
+footer{
+    text-align: center;
+    line-height: 30px;
+}
+
 article{
 
 }
@@ -135,7 +140,7 @@ h2 {
 .project div{
     position: absolute;
     bottom: 0px;
-    opacity: 75%;
+    opacity: 85%;
     background-color: var(--purple);
     color: white;
     font-weight: bold;
