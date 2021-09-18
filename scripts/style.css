@@ -45,6 +45,10 @@ nav a{
     text-decoration: none;
 }
 
+article{
+
+}
+
 #projects {
     display: flex;
     flex-wrap: wrap;
@@ -55,10 +59,13 @@ nav a{
     justify-content: center;
 }
 
+#about{
+    max-width: 850px;
+}
+
 article div[id] {
     margin-left: 150px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 10px 15px;
     min-height: 300px;
 }
 
@@ -84,7 +91,7 @@ article:hover h2{
 }
 
 h2 {
-    transform: translateX(100px) rotate(90deg);
+    transform: translateX(150px) rotate(90deg);
     transform-origin: 0% 0%;
     font-size: 35px;
     position: absolute;
@@ -96,6 +103,8 @@ h2 {
     background-clip: text;
     background-color: #666666;
     font-weight: bolder;
+    line-height: 150px;
+    width: 300px;
 }
 
 .project {
@@ -126,7 +135,7 @@ h2 {
 .project div{
     position: absolute;
     bottom: 0px;
-    opacity: 40%;
+    opacity: 75%;
     background-color: var(--purple);
     color: white;
     font-weight: bold;
@@ -134,4 +143,17 @@ h2 {
     line-height: 30px;
     width: 100%;
     text-align: center;
+}
+
+.project img{
+    border-width: 0;
+}
+
+.portrait{
+    border: solid 3px var(--purple);
+    border-radius: 15px;
+    width: 150px;
+    box-shadow: 2px 2px 3px var(--shadow);
+    float: left;
+    margin: 15px;
 }
