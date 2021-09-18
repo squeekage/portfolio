@@ -8,7 +8,44 @@ body{
     margin: 0px;
 }
 
-#workContainer {
+header {
+    height: 200px;
+    position: relative;
+    z-index: 2;
+    background-image: url("../images/microscope.jpg");
+    /*background-size: cover;*/
+}
+
+h1 {
+    font-size: 75px;
+    color: white;
+    padding-left: 50px;
+    text-shadow: 0 0 4px var(--purple);
+}
+
+nav {
+    background-color: var(--purple);
+    height: 50px;
+}
+
+nav ul{
+    list-style: none;
+    float: right;
+}
+
+nav li{
+    padding: 5px 15px;
+    color: white;
+    display: inline;
+}
+
+nav a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#projects {
     display: flex;
     flex-wrap: wrap;
     min-width: 300px;
@@ -18,22 +55,27 @@ body{
     justify-content: center;
 }
 
-
-    article div[id] {
-        margin-left: 150px;
-        padding-left: 15px;
-        padding-right: 15px;
-        min-height: 300px;
-    }
+article div[id] {
+    margin-left: 150px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 300px;
+}
 
 article:hover div[id]{
     border-left: solid 3px var(--purple);
-    padding-left: 12px;
+    position: relative;
+    left: -3px;
+}
+
+article:hover h2{
+    background-color: var(--purple);
 }
 
 .titleContainer {
     float: left;
     position: fixed;
+    top: 0px;
     width: 150px;
     height: 100%;
     background-color: #d1d2d3;
@@ -41,10 +83,10 @@ article:hover div[id]{
     
 }
 
-.sectionTitle {
+h2 {
     transform: translateX(100px) rotate(90deg);
     transform-origin: 0% 0%;
-    font-size: 50px;
+    font-size: 35px;
     position: absolute;
     /*color: var(--purple);*/
     color: transparent;
@@ -52,7 +94,7 @@ article:hover div[id]{
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-    background-color: var(--purple);
+    background-color: #666666;
     font-weight: bolder;
 }
 
