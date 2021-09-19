@@ -140,7 +140,7 @@ h2 {
     position: absolute;
     color: transparent;
     /*color: var(--purple);*/
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.45); /*use rgba for opacity. 100% opacity does not look right*/
+    text-shadow: 2px -2px 3px rgba(255,255,255,0.45); /*use rgba for opacity. 100% opacity does not look right*/
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -152,7 +152,7 @@ h2 {
 .project {
     flex: 1 0;
     height: 150px;
-    border: solid 3px black;
+    border: solid 3px var(--purple);
     position: relative;
    /* border-radius: 20px;*/
     overflow: hidden;
@@ -252,14 +252,20 @@ h2 {
         display: none;
     }
 
-    h2{
+    h2 {
         transform: none;
         font-size: 30px;
         color: var(--purple);
         text-shadow: 2px 2px 3px var(--shadow);
         width: auto;
         line-height: normal;
-        position: static;
+        top: 0px;
+        z-index: 5;
+        position: sticky;
+        background-clip: initial;
+        -webkit-background-clip: initial;
+        -moz-background-clip: initial;
+        background-color: white;
         border-bottom: solid 3px var(--purple);
         margin: 3px 10px;
     }
@@ -293,7 +299,7 @@ h2 {
     }
 
     article:hover h2 {
-        background-color: initial;
+        background-color: white;
     }
 
     nav{
