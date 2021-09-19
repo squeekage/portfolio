@@ -157,6 +157,7 @@ h2 {
     overflow: hidden;
     max-width: 500px;
     min-width: 350px;
+    margin: 0px;
 }
 
 .project:first-of-type{
