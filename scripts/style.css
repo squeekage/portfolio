@@ -1,5 +1,6 @@
 :root {
     --purple: #4b1b9e;
+    --dark-purple: #360c80;
     --shadow: #808080;
 }
 
@@ -52,7 +53,7 @@ header div {
 
 nav {
     background-color: var(--purple);
-    background-image: linear-gradient(var(--purple), var(--purple), #380f7f);
+    background-image: linear-gradient(var(--purple), var(--purple), var(--dark-purple));
     height: 50px;
 }
 
@@ -119,7 +120,7 @@ article:hover div[data-content] {
 }
 
 article:hover h2{
-    background-color: var(--purple);
+    background-color: var(--dark-purple);
 }
 
 .titleContainer {
@@ -128,7 +129,7 @@ article:hover h2{
     top: 0px;
     width: 150px;
     height: 100%;
-    background-color: #d1d2d3;
+    background-color: #d4d4d4;
     box-shadow: 2px 0px 3px var(--shadow);
 }
 
@@ -139,7 +140,7 @@ h2 {
     position: absolute;
     color: transparent;
     /*color: var(--purple);*/
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.6); /*use rgba for opacity. 100% opacity does not look right*/
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.45); /*use rgba for opacity. 100% opacity does not look right*/
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
